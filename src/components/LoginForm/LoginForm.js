@@ -24,7 +24,12 @@ const LoginForm = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                setSuccess(true);
+                if (!user?.emailVerified) {
+                    alert("Please verify your email before log in!");
+                }
+                else {
+                    setSuccess(true);
+                }
 
             })
             .catch((error) => {

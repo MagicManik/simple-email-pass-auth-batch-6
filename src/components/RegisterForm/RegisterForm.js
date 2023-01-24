@@ -70,9 +70,7 @@ const RegisterForm = () => {
                 <input type="password" name="password" id="" placeholder='pass' />
                 <br />
                 <h3>{passwordError}</h3>
-                {
-                    success && <h3>Successfully account created!</h3>
-                }
+                {success && <h3>Successfully account created!</h3>}
                 <button type="submit">Register</button>
             </form>
             <h4>Already have an account? <Link to="/login">Log in</Link></h4>
